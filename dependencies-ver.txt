@@ -1,0 +1,13 @@
+g++=4:10.3.0-1ubuntu1
+cmake=3.18.4-2ubuntu1
+libmpfr-dev=4.1.0-3build1
+libgmp-dev=2:6.2.1+dfsg-1ubuntu2
+libboost-thread-dev=1.74.0.3ubuntu5
+libboost-system-dev=1.74.0.3ubuntu5
+libeigen3-dev=3.3.9-2
+zlib1g-dev=1:1.2.11.dfsg-2ubuntu6
+libopenbabel-dev=3.1.1+dfsg-5ubuntu1
+qt5-qmake=5.15.2+dfsg-5
+qtbase5-dev=5.15.2+dfsg-5
+qtchooser=66-2build1
+qtbase5-dev-tools=5.15.2+dfsg-5

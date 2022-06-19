@@ -1,0 +1,9 @@
+@<TRIPOS>MOLECULE
+*****
+ 1 0 0 0 0
+SMALL
+GASTEIGER
+
+@<TRIPOS>ATOM
+      1 XE          0.0000    0.0000    0.0000 Xe      1  LIG1        0.0000
+@<TRIPOS>BOND

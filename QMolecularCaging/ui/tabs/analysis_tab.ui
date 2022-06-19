@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AnalysisTab</class>
+ <widget class="QWidget" name="AnalysisTab">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>537</width>
+    <height>311</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="layout4" stretch="0,1">
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <property name="leftMargin">
+    <number>4</number>
+   </property>
+   <property name="topMargin">
+    <number>4</number>
+   </property>
+   <property name="rightMargin">
+    <number>4</number>
+   </property>
+   <property name="bottomMargin">
+    <number>4</number>
+   </property>
+   <item>
+    <layout class="QVBoxLayout" name="layout1">
+     <item>
+      <widget class="QGroupBox" name="completed_jobs_group_box">
+       <property name="title">
+        <string>Loaded jobs:</string>
+       </property>
+       <layout class="QVBoxLayout" name="layout12" stretch="3,0,2">
+        <property name="spacing">
+         <number>4</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="CustomListWidget" name="completed_jobs_list_widget"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="load_jobs_from_files_button">
+          <property name="text">
+           <string>Load jobs from files</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="job_details_group_box">
+          <property name="title">
+           <string>Job details:</string>
+          </property>
+          <layout class="QVBoxLayout" name="layout3">
+           <property name="spacing">
+            <number>4</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QTextEdit" name="job_details_edit">
+             <property name="palette">
+              <palette>
+               <active>
+                <colorrole role="Base">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>238</red>
+                   <green>238</green>
+                   <blue>238</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+               </active>
+               <inactive>
+                <colorrole role="Base">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>238</red>
+                   <green>238</green>
+                   <blue>238</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+               </inactive>
+               <disabled>
+                <colorrole role="Base">
+                 <brush brushstyle="SolidPattern">
+                  <color alpha="255">
+                   <red>238</red>
+                   <green>238</green>
+                   <blue>238</blue>
+                  </color>
+                 </brush>
+                </colorrole>
+               </disabled>
+              </palette>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="add_jobs_to_summary_button">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Add jobs to summary</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="layout2">
+     <property name="spacing">
+      <number>4</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="static1">
+       <property name="text">
+        <string>Results summary:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableView" name="summary_table_view"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="layout8">
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item>
+        <widget class="QRadioButton" name="time_ms_radio_button">
+         <property name="text">
+          <string>Time (ms)</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">time_mode_button_group</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="time_s_radio_button">
+         <property name="text">
+          <string>Time (s)</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">time_mode_button_group</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="time_min_radio_button">
+         <property name="text">
+          <string>Time (min)</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">time_mode_button_group</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="time_h_radio_button">
+         <property name="text">
+          <string>Time (h)</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">time_mode_button_group</string>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="layout5" stretch="0,1">
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item>
+        <layout class="QGridLayout" name="layout9" columnstretch="0,1">
+         <item row="2" column="1">
+          <widget class="QComboBox" name="result_variable_combo_box"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="static4">
+           <property name="text">
+            <string>Columns:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="static6">
+           <property name="text">
+            <string>Result:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QComboBox" name="column_variable_combo_box"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="static5">
+           <property name="text">
+            <string>Rows:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="row_variable_combo_box"/>
+         </item>
+         <item row="3" column="0" colspan="2">
+          <layout class="QVBoxLayout" name="layout10">
+           <item>
+            <widget class="QCheckBox" name="colours_check_box">
+             <property name="text">
+              <string>Colours</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="export_summary_button">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="text">
+              <string>Export...</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="constants_group_box">
+         <property name="title">
+          <string>Display conditions:</string>
+         </property>
+         <layout class="QGridLayout" name="layout11">
+          <property name="leftMargin">
+           <number>4</number>
+          </property>
+          <property name="topMargin">
+           <number>4</number>
+          </property>
+          <property name="rightMargin">
+           <number>4</number>
+          </property>
+          <property name="bottomMargin">
+           <number>4</number>
+          </property>
+          <property name="spacing">
+           <number>4</number>
+          </property>
+          <item row="1" column="0">
+           <widget class="QLabel" name="static8">
+            <property name="text">
+             <string>Host:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="static9">
+            <property name="text">
+             <string>SO3 grid:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="static10">
+            <property name="text">
+             <string>Epsilon:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="static7">
+            <property name="text">
+             <string>Guest:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="static11">
+            <property name="text">
+             <string>Infinity:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="guest_constant_combo_box"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="host_constant_combo_box"/>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="grid_constant_combo_box"/>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="epsilon_constant_combo_box"/>
+          </item>
+          <item row="4" column="1">
+           <widget class="QComboBox" name="infinity_constant_combo_box"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CustomListWidget</class>
+   <extends>QListWidget</extends>
+   <header>ui/widgets/custom_list_widget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="time_mode_button_group"/>
+ </buttongroups>
+</ui>
